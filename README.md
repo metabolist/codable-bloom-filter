@@ -18,6 +18,14 @@ dependencies: [
 ],
 ```
 
+### CocoaPods
+
+Add the following to your `Podfile`:
+
+```ruby
+pod 'CodableBloomFilter', '~> 1.0'
+```
+
 ## Usage
 
 For a type to be usable in a bloom filter, it must conform to the `DeterministicallyHashable` protocol. An implemenation for `Data` and `String` is included.
@@ -28,6 +36,8 @@ Note that while a size of 8 bytes is used in the following examples to keep the 
 
 A bloom filter can be used similarly to a `Set`:
 ```swift
+import CodableBloomFilter
+
 var bloomFilter = BloomFilter<String>(hashes: [.sdbm32, .djb232], byteCount: 8)
 
 bloomFilter.insert("string")
