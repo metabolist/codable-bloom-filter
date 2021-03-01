@@ -30,7 +30,7 @@ pod 'CodableBloomFilter', '~> 1.0'
 
 For a type to be usable in a bloom filter, it must conform to the `DeterministicallyHashable` protocol. An implemenation for `Data` and `String` is included.
 
-Bloom filters are initialized with a set of hash functions and a count of bytes to use. CodableBloomFilter provides 5 different hash functions (32-bit versions of DJB2, DJB2a, SDBM, FNV1, and FNV1a). For determining the number of hash functions and size for your use case, see https://en.wikipedia.org/wiki/Bloom_filter#Optimal_number_of_hash_functions.
+Bloom filters are initialized with a set of hash functions and a count of bytes to use. CodableBloomFilter provides 5 different hash functions (32-bit versions of DJB2, DJB2a, SDBM, FNV1, and FNV1a). For determining the number of hash functions and size for your use case, see https://hur.st/bloomfilter/ or https://en.wikipedia.org/wiki/Bloom_filter#Optimal_number_of_hash_functions.
 
 Note that while a size of 8 bytes is used in the following examples to keep the output readable, in practice you will likely want something larger.
 
